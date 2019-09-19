@@ -1,0 +1,56 @@
+// CONTACT 
+.section__contact {
+  background-color: rgba($color-primary-light, .3);
+  padding-bottom: 2em;
+  font-size: 1rem;
+
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 56.25em) {
+      width: 100%;
+      display: flex;
+    }
+  }
+
+  .contact__details {
+    padding-bottom: 2em;
+    flex: 1;
+  }
+
+  .contact__icon  {
+    width: 3rem;
+    height: 3rem;
+    fill: $color-primary-light;
+    padding-right: 1em;
+  }
+
+  .contact__item {
+    display: flex;
+    align-items: center;
+    padding-right: 1em;
+  }
+
+  .facebook-link {
+    text-decoration: none;
+    color: $color-grey-dark;
+  }
+
+  .contact__map{
+    overflow:hidden;
+    position:relative;
+    flex: 2;
+
+    iframe{
+      left:0;
+      top:0;
+      height:100%;
+      width:100%;
+      position:absolute;
+      padding: 0 1em;
+    }
+  }
+}

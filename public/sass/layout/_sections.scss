@@ -1,0 +1,269 @@
+.section__quotes {
+  height: 12vh;
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.9), rgba($color-primary, 0.9));
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  padding: .5em
+}
+
+.section__quotes .quotes {
+  display: none;
+  color: $color-white;
+}
+
+@media (min-width: 37.5em) {
+  .section__quotes {
+    height: 10vh;
+  }
+}
+
+.section__treatments {
+  background-color: rgba($color-primary-light, 0.302);
+  padding-bottom: .8em;
+}
+
+.section__treatments .card {
+  width: 80%;
+  margin: .8em auto;
+  padding: .5em;
+  background-color: $color-grey-light;
+  box-shadow: 0 0.05em 1em $color-primary;
+  border-radius: 3px;
+  transition: all .4s;
+}
+
+@supports (background-blend-mode: overlay) {
+  .section__treatments .card {
+      background-image: linear-gradient(to bottom, rgba($color-black, 0.3), rgba($color-black, 0.3)), 
+      url(../img/treatment-card.jpg);
+      background-position: top left;
+      background-size: cover;
+      background-blend-mode: overlay;
+  }
+}
+
+.section__treatments .card:hover {
+  -webkit-transform: translateY(-3px) scale(1.03);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 0.07em 1.4em $color-shadow-darkest;
+}
+
+.section__treatments .card__list {
+  list-style: none;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.section__treatments .card__list__item {
+  text-align: center;
+  font-size: 1.1rem;
+  color: $color-card-text;
+  padding: 1.5rem;
+}
+
+.section__treatments .card__list__item:not(:last-child) {
+  border-bottom: 1px solid rgba($color-primary-light, 0.302);
+}
+
+.section__treatments .price-list-button {
+  color: $color-white;
+  background-color: $color-primary-light;
+  padding: .3em .8em;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: all .3s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.section__treatments .price-list-button:hover {
+  -webkit-transform: translateY(-6px) scale(1.3);
+  transform: translateY(-6px) scale(1.3);
+  box-shadow: 0 0.1em 0.2em rgba($color-primary, 0.8);
+  padding: .4em 1em;
+  background-color: $color-card-button;
+  border: 2px solid $color-primary-light;
+}
+
+.section__treatments .price-list-button:active {
+  -webkit-transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
+  box-shadow: 0 0.05em 0.05em rgba($color-primary, 0.8);
+  padding: .4em 1em;
+  background-color: $color-card-button;
+  border: 2px solid $color-primary-light;
+}
+
+@media (min-width: 56.25em) {
+  .section__treatments__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section__treatments .card {
+    width: 40%;
+  }
+}
+
+.section__products {
+  background-color: $color-grey-light;
+  font-size: 1.2rem;
+}
+
+.section__products .product__list {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+@media (min-width: 37.5em) {
+  .section__products .product__list {
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .section__products .product__list {
+    max-width: 50%;
+  }
+}
+
+.section__products .product__container {
+  background-color: $color-white;
+  border-radius: 3px;
+  box-shadow: 0.05em 0.05em 1em $color-primary;
+  padding: 2em;
+  margin-bottom: 2em;
+}
+
+.section__products .product__container--decleor {
+  display: flex;
+  flex-direction: column;
+}
+
+.section__products .product__container--decleor .product-image {
+  padding-top: 1em;
+  width: 50%;
+  align-self: center;
+}
+
+.section__products .product__container--decleor .product-info {
+  flex: 80%;
+  padding: 1em;
+}
+
+.section__products .product__container--calgel {
+  display: flex;
+  flex-direction: column;
+}
+
+.section__products .product__container--calgel .product-image {
+  padding-top: 1em;
+  width: 50%;
+  align-self: center;
+}
+
+.section__products .product__container--calgel .product-info {
+  flex: 80%;
+  padding: 1em;
+}
+
+.section__products .product__container--mavalla {
+  display: flex;
+  flex-direction: column;
+}
+
+.section__products .product__container--mavalla .product-image {
+  padding-top: 1em;
+  width: 100%;
+  align-self: center;
+}
+
+.section__products .product__container--mavalla .product-info {
+  flex: 80%;
+  padding: 1em;
+}
+
+.section__contact {
+  background-color: rgba($color-primary-light, 0.3);
+  padding-bottom: 2em;
+  font-size: 1rem;
+}
+
+.section__contact__container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 56.25em) {
+  .section__contact__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.section__contact .contact__details {
+  padding-bottom: 2em;
+}
+
+.section__contact .contact__icon {
+  width: 3rem;
+  height: 3rem;
+  fill: $color-primary-light;
+  padding-right: 1em;
+}
+
+.section__contact .contact__item {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 56.25em) {
+  .section__contact .contact__item {
+    padding-bottom: 1.5em;
+  }
+}
+
+.section__contact .facebook-link,
+.section__contact .hoursLink,
+.section__contact .email-link {
+  text-decoration: none;
+  color: $color-grey-dark;
+  transition: all .2s;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.section__contact .facebook-link:hover,
+.section__contact .hoursLink:hover,
+.section__contact .email-link:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  color: $color-primary-light;
+}
+
+.section__contact .contact__map {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  border: 2px solid rgba($color-primary-light, 0.302);
+  border-radius: 3px;
+  flex: 60%;
+}
+
+@media (min-width: 56.25em) {
+  .section__contact .contact__map {
+    margin-left: 1.5em;
+  }
+}
+
+.section__contact .contact__map iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}

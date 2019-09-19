@@ -1,0 +1,71 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: $color-grey-dark;
+}
+
+@media (min-width: 75em) {
+  body {
+      padding: 0 1.5em
+  }
+}
+
+.heading__primary {
+  color: $color-white;
+  font-family: 'Parisienne', cursive;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: .01em;
+  text-shadow: 0 0.06em 0.08em $color-shadow-darkest;
+  -webkit-animation: moveInFromBottom 1.2s ease-in .2s backwards;
+  animation: moveInFromBottom 1.2s ease-in .2s backwards
+}
+
+@media (min-width: 37.5em) {
+  .heading__primary {
+      font-size: 5rem
+  }
+}
+
+@media (min-width: 56.25em) {
+  .heading__primary {
+      font-size: 6rem
+  }
+}
+
+.heading__secondary {
+  color: $color-primary-light;
+  font-size: 2.3rem;
+  font-weight: 300;
+  letter-spacing: .02em;
+  display: inline-block;
+  text-shadow: 0 0.06em 0.08em $color-primary;
+}
+
+.card__heading {
+  font-family: 'Parisienne', cursive;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: $color-primary-light;
+  display: inline-block
+}
+
+.modal__heading {
+  font-family: 'Parisienne', cursive;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: .01em;
+  color: $color-primary-light;
+  display: inline-block
+}
+
+.modal__heading--sub {
+  font-size: 1rem;
+  color: $color-primary-light;
+  display: inline-block
+}

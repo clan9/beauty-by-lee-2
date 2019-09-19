@@ -1,0 +1,22 @@
+.header {
+  height: 50vh;
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.749), rgba($color-primary, 0.749)), url(../img/back1-vert-small.jpg);
+  background-position: bottom;
+  background-size: cover;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center
+}
+
+@media (min-width: 37.5em) {
+  .header {
+      height: 60vh
+  }
+}
+
+@media (min-width: 56.25em) {
+  .header {
+      height: 70vh
+  }
+}

@@ -1,0 +1,29 @@
+.navigation {
+  height: 8vh;
+  background-image: linear-gradient(to right bottom, rgba($color-primary-light, 0.851), rgba($color-primary, 0.851));
+  list-style: none;
+  display: flex;
+  justify-content: center
+}
+
+.navigation__item {
+  padding-top: .5em
+}
+
+.navigation__item:not(:last-of-type) {
+  margin-right: 1em
+}
+
+.nav__link {
+  color: $color-white;
+  padding: .5em;
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-decoration: none;
+  transition: all .2s
+}
+
+.nav__link:hover {
+  background-color: $color-navlink-hover;
+  border-radius: 3px
+}

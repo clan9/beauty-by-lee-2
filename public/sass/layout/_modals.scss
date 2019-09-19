@@ -1,0 +1,138 @@
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color-black, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s
+}
+
+.close__icon {
+  float: right;
+  width: 2rem;
+  height: 2rem;
+  fill: $color-primary-light;
+  transition: all .2s
+}
+
+.close__icon:hover {
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4)
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, -webkit-transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s, -webkit-transform 0.25s
+}
+
+.modal-content {
+  position: absolute;
+  z-index: 2;
+  background-color: $color-pink-light;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  padding: .5rem;
+  margin-top: .2em;
+  width: 80%;
+  border-radius: 3px
+}
+
+@media (min-width: 56.25em) {
+  .modal-content {
+      width: 70%
+  }
+}
+
+@media (min-width: 75em) {
+  .modal-content {
+      width: 55%
+  }
+}
+
+.price-list {
+  background-color: $color-pink-light;
+  color: $color-primary-light;
+  list-style: none;
+  font-size: 1rem
+}
+
+@media (min-width: 37.5em) {
+  .price-list {
+      padding: 0 2em
+  }
+}
+
+@media (min-width: 75em) {
+  .price-list {
+      padding: 2em 4em
+  }
+}
+
+.price-list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .2em 0;
+  border-bottom: 1px solid $color-primary-light;
+}
+
+.price-list__item .amount {
+  padding: 0 .5em;
+  font-size: 1.2rem;
+  font-weight: bold
+}
+
+.price-list .last-item {
+  margin-bottom: 1em
+}
+
+.hours__list {
+  color: $color-primary-light;
+  list-style: none;
+  font-size: 1rem
+}
+
+@media (min-width: 37.5em) {
+  .hours__list {
+      padding: 0 2em
+  }
+}
+
+@media (min-width: 75em) {
+  .hours__list {
+      padding: 2em 4em
+  }
+}
+
+.hours__list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: .2em 0;
+  border-bottom: 1px solid $color-primary-light;
+}
+
+.hours__list__item .time {
+  padding: 0 .5em;
+  font-size: 1.2rem;
+  font-weight: bold
+}
+
+.hours__list .last-item {
+  margin-bottom: 1em;
+}

@@ -1,0 +1,30 @@
+{
+  "name": "no-wp-bplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:babel": "babel src -d public/scripts --watch",
+    "watch:sass": "node-sass public/sass/main.scss public/css/style.css -w",
+    "devserver": "live-server public",
+    "start": "npm-run-all --parallel devserver watch:sass watch:babel",
+    "compile:sass": "node-sass public/sass/main.scss public/css/style.compiled.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' public/css/style.compiled.css -o public/css/style.prefix.css",
+    "compress:css": "node-sass public/css/style.prefix.css public/css/style.css --output-style compressed",
+    "babel:prod": "babel src -d public/scripts",
+    "build": "npm-run-all compile:sass prefix:css compress:css babel:prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "autoprefixer": "^9.4.4",
+    "live-server": "^1.2.1",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^6.1.1"
+  }
+}
